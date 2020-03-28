@@ -1,17 +1,17 @@
 #!/bin/bash -x
 
 shopt -s extglob
-function mobileNumber()
+function password_1()
 {
-   echo "Enter Mobile Number with country code :"
-   read mobile
-   mobile_pat="^[0-9]{2}[[:space:]][0-9]{10}$"
-   if [[ $mobile =~ $mobile_pat ]]
+   echo "Enter password(minimun 8 char) :"
+   read password
+   password_pat1="^[A-Za-z0-9]{8,}$"
+   if [[ $password =~ $password_pat1 ]]
    then
-      echo "Mobile number is valid."
+      echo "Password is valid."
    else
-      echo "Invalid Mobile number."
+      echo "Invalid Password."
    fi
 }
 
-mobileNumber
+password_1
