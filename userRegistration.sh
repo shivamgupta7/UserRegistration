@@ -1,17 +1,17 @@
 #!/bin/bash -x
 
 shopt -s extglob
-echo "Enter Fast Name (starts with Cap and has min 3 char): "
-function firstName()
+echo "Enter Last Name (starts with Cap and has min 3 char): "
+function lastName()
 {
-   read fname
-   fname_pat="^[A-Z][a-z]{2,}$"
-   if [[ $fname =~ $fname_pat ]]
+   read lname
+   lname_pat="^[A-Z][a-z]{2,}$"
+   if [[ $lname =~ $lname_pat ]]
    then
-      echo "Valid First Name."
+      echo "Valid Last Name."
    else
-      echo "Invalid First Name."
+      echo "Invalid Last Name."
    fi
 }
 
-firstName
+lastName
