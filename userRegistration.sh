@@ -1,12 +1,12 @@
 #!/bin/bash -x
 
 shopt -s extglob
-function password_2()
+function password_3()
 {
-   echo "Enter password(minimun 8 char & at least 1 Upper Case) :"
+   echo "Enter password(minimun 8 char at least 1 Upper Case & Numeric number) :"
    read password
-   password_pat2="^(?=.*[A-Z])[A-Za-z0-9]{8,}$"
-   if [[ $password =~ $password_pat2 ]]
+   password_pat3="^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$"
+   if [[ $password =~ $password_pat3 ]]
    then
       echo "Password is valid."
    else
@@ -14,4 +14,4 @@ function password_2()
    fi
 }
 
-password_2
+password_3
