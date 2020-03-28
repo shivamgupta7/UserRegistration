@@ -1,17 +1,17 @@
 #!/bin/bash -x
 
 shopt -s extglob
-function emailID()
+function mobileNumber()
 {
-   echo "Enter Email Id :"
-   read email
-   email_pat="^([a-zA-Z]+[a-zA-Z0-9]*((\.|\-|\+|\_)?[A-Za-z0-9]*))@([a-zA-Z0-9]+)\.([a-z]{2,4})(\.[a-z]{2})?$"
-   if [[ $email =~ $email_pat ]]
+   echo "Enter Mobile Number with country code :"
+   read mobile
+   mobile_pat="^[0-9]{2}[[:space:]][0-9]{10}$"
+   if [[ $mobile =~ $mobile_pat ]]
    then
-      echo "Email is valid."
+      echo "Mobile number is valid."
    else
-      echo "Invalid Email."
+      echo "Invalid Mobile number."
    fi
 }
 
-emailID
+mobileNumber
